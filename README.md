@@ -2,7 +2,7 @@
 
 Solved *by* Grid is a personal collection of common HTML templates solved by the built-in [CSS Grid](https://www.w3.org/TR/css3-grid-layout/) feature.
 
-CSS Grid allows to build compley layouts very simply and it is easy to learn.
+CSS Grid allows to build complex layouts very simply and it is easy to learn.
 
 # [Demo](https://solved-by-grid.now.sh/)
 
