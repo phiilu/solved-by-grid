@@ -1,0 +1,17 @@
+{
+    "name": "solved-by-grid",
+    "version": "1.0.0",
+    "main": "index.html",
+    "license": "MIT",
+    "author": "Florian Kapfenberger",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/flowryaan/solved-by-grid.git"
+    },
+    "scripts": {
+        "start": "browser-sync start --server --files \".\""
+    },
+    "devDependencies": {
+        "browser-sync": "^2.18.8"
+    }
+}

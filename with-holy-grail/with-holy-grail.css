@@ -1,0 +1,42 @@
+.page-wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+      "header"
+      "sidenav"
+      "main"
+      "advertisement"
+      "footer";
+    grid-template-rows: 1fr 2fr 10fr 2fr 1fr;
+}
+
+@media screen and (min-width: 768px) {
+  .page-wrapper {
+    grid-template-areas:
+      "header header header"
+      "sidenav main advertisement"
+      "footer footer footer";
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-columns: 20% auto 20%;
+  }
+}
+
+header {
+  grid-area: header
+}
+
+aside.sidenav {
+  grid-area: sidenav
+}
+
+main {
+  grid-area: main
+}
+
+aside.advertisement {
+  grid-area: advertisement
+}
+
+footer {
+  grid-area: footer
+}
