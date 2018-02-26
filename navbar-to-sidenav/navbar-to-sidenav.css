@@ -8,9 +8,18 @@
     grid-template-rows: auto 1fr auto;
 }
 header {
-  grid-area: header
+  grid-area: header;
+  display: flex;
 }
-
+.header-title {
+  margin: auto;
+}
+.menu-button{
+  background-color: palevioletred;
+  width: 40px;
+  height: 40px;
+  justify-self: flex-start;
+}
 aside.left-margin {
   visibility:hidden;
   display:none;
@@ -41,20 +50,28 @@ nav{
   grid-column-end: -1;
   grid-row: span 2;
   grid-row-start: main;
-  z-index: 2;
+  z-index: 1;
 }
 main{
+  z-index: 22;
   margin-top: 400px;
 }
-.main-content {
+.collection-container {
+  margin-top: -100px;
   background-color:white;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
 }
 .item{
+  border: 1px solid;
   color: black;
-  width: 100%
+  margin: 5px;
+  height: 50px;
+  min-width: 50px;
+}
+#main{
+  overflow-x: scroll;
 }
 @media (min-width: 768px) {
   aside.right-margin {
@@ -82,5 +99,9 @@ main{
       "left-margin footer right-margin";
     grid-template-rows: auto auto 1fr auto;
     grid-template-columns: 1fr minmax(150px, 1176px) 1fr;
+  }
+  .menu-button{
+    visibility: hidden;
+    display: none;
   }
 }

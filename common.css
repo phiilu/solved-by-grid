@@ -9,9 +9,6 @@ body {
 }
 
 header, aside, main, footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 2.5rem;
 }
 
@@ -20,6 +17,7 @@ header {
 }
 
 aside {
+  display: flex;
   background: #FF851B;
 }
 
@@ -28,5 +26,6 @@ main {
 }
 
 footer {
+  display: flex;
   background: #2ECC40;
 }
