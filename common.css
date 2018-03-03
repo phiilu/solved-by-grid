@@ -8,7 +8,7 @@ body {
   font-family: "Helvetica Neue", "Arial";
 }
 
-header, aside, main, footer {
+header, aside, main, footer, nav {
   display: flex;
   justify-content: center;
   align-items: center;
