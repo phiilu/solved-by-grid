@@ -1,78 +1,76 @@
+:root {
+  --nav-color: #ff71b8;
+}
+/* =============== */
+/* Mobile First 📱*/
+/* ============== */
 .page-wrapper {
-    height: 100vh;
     display: grid;
+    height: 100vh;
     grid-template-areas:
       "header"
       "main"
       "footer";
     grid-template-rows: auto 1fr auto;
 }
-header {
-  grid-area: header;
-  display: flex;
-}
+header { grid-area: header; display: flex; }
+main { grid-area: main }
+footer { grid-area: footer }
+aside.left-margin { visibility:hidden; display:none; }
+aside.right-margin { visibility: hidden; display: none; }
+nav { visibility:hidden; display: none; }
+
+/* Mobile side navigation */
 .header-title {
   margin: auto;
 }
-.menu-button{
-  background-color: palevioletred;
-  width: 40px;
-  height: 40px;
+.menu-button {
+  background-color: var(--nav-color);
   justify-self: flex-start;
+  padding: 0 0.8rem;
 }
-aside.left-margin {
-  visibility:hidden;
-  display:none;
-}
-
-main {
-  grid-area: main
-}
-
-aside.right-margin {
-  visibility: hidden;
-  display: none;
-}
-
-footer {
-  grid-area: footer
-}
-
-nav{
-  visibility:hidden;
-  display: none;
-}
-
-.hero{
-  background-color: gray;
-  height: 400px;
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row: span 2;
-  grid-row-start: main;
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
   z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
-main{
-  z-index: 22;
-  margin-top: 400px;
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
-.collection-container {
-  margin-top: -100px;
-  background-color:white;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+
+.sidenav a:hover {
+  color: #f1f1f1;
 }
-.item{
-  border: 1px solid;
-  color: black;
-  margin: 5px;
-  height: 50px;
-  min-width: 50px;
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
-#main{
+
+#main {
+  transition: margin-left .5s;
   overflow-x: scroll;
 }
+
+/* =============== */
+/*    Desktop 🖥   */
+/* =============== */
 @media (min-width: 768px) {
   aside.right-margin {
     grid-area: right-margin;
@@ -87,8 +85,8 @@ main{
   nav{
     height: 50px;;
     visibility: visible;
-    display: block;
-    background-color: palevioletred;
+    display: flex;
+    background-color: var(--nav-color);
     grid-area: nav;
   }
   .page-wrapper {
