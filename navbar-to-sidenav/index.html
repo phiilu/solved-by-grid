@@ -12,39 +12,32 @@
     <title>Solved by CSS Grid</title>
 </head>
 <body>
-<div id="sideNav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">Item</a>
-    <a href="#">Item</a>
-    <a href="#">Item</a>
-    <a href="#">Item</a>
+<div class="sidenav hidden">
+    <ul>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
 </div>
-<div id="main" class="page-wrapper">
-    <header>
-        <span class="menu-button">
-            <span onclick="openNav()">&#9776;</span>
-        </span>
-        <div class="header-title">
-            Header
-        </div>
-    </header>
-    <nav>Nav</nav>
-    <aside class="left-margin"></aside>
-    <main>Main
-    </main>
-    <aside class="right-margin"></aside>
-    <footer>Footer</footer>
-</div>
+<header>
+    <span class="menu-button">
+        <span onclick="document.querySelector('.sidenav').classList.toggle('hidden')">&#9776;</span>
+    </span>
+    <div class="header-title">
+        Header
+    </div>
+</header>
+<nav>Nav</nav>
+<aside class="left-margin"></aside>
+<main>Main
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci autem consequatur corporis eius, enim exercitationem fugiat, incidunt laborum molestias mollitia nostrum provident quaerat quibusdam quidem reprehenderit sed ullam! Blanditiis, cupiditate!</span>
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deleniti dolore facere impedit, ipsum laudantium maxime minus neque nihil officiis reiciendis rem similique, suscipit totam voluptas? Fugit neque provident voluptatum?</span>
+</main>
+<aside class="right-margin"></aside>
+<footer>Footer</footer>
+
 </body>
 <script>
-    function openNav() {
-        document.getElementById("sideNav").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "250px";
-    }
-
-    function closeNav() {
-        document.getElementById("sideNav").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-    }
 </script>
 </html>

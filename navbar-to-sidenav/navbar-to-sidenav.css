@@ -4,14 +4,15 @@
 /* =============== */
 /* Mobile First 📱*/
 /* ============== */
-.page-wrapper {
+body {
     display: grid;
     height: 100vh;
     grid-template-areas:
-      "header"
-      "main"
-      "footer";
+      "sidenav header"
+      "sidenav main"
+      "sidenav footer";
     grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto auto;
 }
 header { grid-area: header; display: flex; }
 main { grid-area: main }
@@ -19,6 +20,11 @@ footer { grid-area: footer }
 aside.left-margin { visibility:hidden; display:none; }
 aside.right-margin { visibility: hidden; display: none; }
 nav { visibility:hidden; display: none; }
+.sidenav { grid-area: sidenav; background-color: var(--nav-color); width: 250px; }
+
+.hidden {
+  visibility:hidden; display:none;
+}
 
 /* Mobile side navigation */
 .header-title {
@@ -28,27 +34,7 @@ nav { visibility:hidden; display: none; }
   background-color: var(--nav-color);
   justify-self: flex-start;
   padding: 0 0.8rem;
-}
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
 }
 
 .sidenav a:hover {
@@ -89,7 +75,7 @@ nav { visibility:hidden; display: none; }
     background-color: var(--nav-color);
     grid-area: nav;
   }
-  .page-wrapper {
+  body {
     grid-template-areas:
       "left-margin header right-margin"
       "left-margin nav right-margin"
@@ -102,4 +88,5 @@ nav { visibility:hidden; display: none; }
     visibility: hidden;
     display: none;
   }
+  .sidenav { visibility: hidden; display: none;}
 }
