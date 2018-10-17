@@ -6,9 +6,14 @@
 body {
   color: white;
   font-family: "Helvetica Neue", "Arial";
+  overflow: hidden;
 }
 
-header, aside, main, footer, nav {
+header,
+aside,
+main,
+footer,
+nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,13 +25,13 @@ header {
 }
 
 aside {
-  background: #FF851B;
+  background: #ff851b;
 }
 
 main {
-  background: #7FDBFF;
+  background: #7fdbff;
 }
 
 footer {
-  background: #2ECC40;
+  background: #2ecc40;
 }

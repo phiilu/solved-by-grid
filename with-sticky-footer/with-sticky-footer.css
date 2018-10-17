@@ -1,21 +1,21 @@
 .page-wrapper {
-    height: 100vh;
-    display: grid;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-    grid-template-rows: 1fr 10fr 1fr;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 1fr 10fr 1fr;
 }
 
 header {
-  grid-area: header
+  grid-area: header;
 }
 
 main {
-  grid-area: main
+  grid-area: main;
 }
 
 footer {
-  grid-area: footer
+  grid-area: footer;
 }

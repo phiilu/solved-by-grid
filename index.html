@@ -16,17 +16,19 @@
     }
 
     main {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      flex-flow: column;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
     }
 
     .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background-color: #7FDBFF;
       width: 100%;
+      height: 100%;
       text-align: center;
-      padding: 0.5rem;
       transition: all 0.3s;
     }
 
@@ -43,6 +45,10 @@
     footer {
       font-size: 2rem;
     }
+
+    i {
+      margin: 0 5px;
+    }
   </style>
 
   <title>Solved by CSS Grid</title>
@@ -50,26 +56,16 @@
 
 <body>
   <div class="page-wrapper">
-    <header>Solved by Grid</header>
+    <header>Solved <i>by</i> Grid</header>
     <main>
-      <div class="item">
-        <a href="with-sidenav-footer-1">With Sidenav Footer 1</a>
-      </div>
-      <div class="item">
-        <a href="with-sidenav-footer-2">With Sidenav Footer 2</a>
-      </div>
-      <div class="item">
-        <a href="with-holy-grail">Holy Grail</a>
-      </div>
-      <div class="item">
-        <a href="with-sticky-footer">Sticky Footer</a>
-      </div>
-      <div class="item">
-        <a href="with-navbar-to-sidenav-toggle">With navbar to sidenav toggle</a>
-      </div>
+      <a href="with-sidenav-footer-1" class="item">With Sidenav Footer 1</a>
+      <a href="with-sidenav-footer-2" class="item">With Sidenav Footer 2</a>
+      <a href="with-holy-grail" class="item">Holy Grail</a>
+      <a href="with-sticky-footer" class="item">Sticky Footer</a>
+      <a href="with-navbar-to-sidenav-toggle" class="item">With navbar to sidenav toggle</a>
     </main>
     <footer>
-      &copy; 2018 Florian Kapfenberger
+      &copy; 2018 Sovled <i>by</i> Grid
     </footer>
   </div>
 </body>

@@ -1,12 +1,12 @@
 .page-wrapper {
-    height: 100vh;
-    display: grid;
-    grid-template-areas:
-      "header"
-      "sidenav"
-      "main"
-      "footer";
-    grid-template-rows: 1fr 2fr 8fr 1fr;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "sidenav"
+    "main"
+    "footer";
+  grid-template-rows: 1fr 2fr 8fr 1fr;
 }
 
 @media screen and (min-width: 768px) {
@@ -21,17 +21,17 @@
 }
 
 header {
-  grid-area: header
+  grid-area: header;
 }
 
 aside.sidenav {
-  grid-area: sidenav
+  grid-area: sidenav;
 }
 
 main {
-  grid-area: main
+  grid-area: main;
 }
 
 footer {
-  grid-area: footer
+  grid-area: footer;
 }

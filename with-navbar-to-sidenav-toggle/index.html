@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,27 +8,35 @@
 
     <link rel="stylesheet" href="/common.css">
     <link rel="stylesheet" href="/with-navbar-to-sidenav-toggle/navbar-to-sidenav-toggle.css">
-    <link rel="stylesheet" href="/with-navbar-to-sidenav-toggle/navbar-to-sidenav-toggle.css">
 
     <title>Solved by CSS Grid</title>
 </head>
+
 <body>
-<div class="sidenav hidden"> </div>
-<header>
-    <span id="menu-button" class="menu-button">
-        <span onclick="document.querySelector('.sidenav').classList.toggle('hidden'); document.querySelector('.menu-button').classList.toggle('moved')">&#9776;</span>
-    </span>
-    <div class="header-title">
-        Header
-    </div>
-</header>
-<nav>Nav</nav>
-<aside class="left-margin"></aside>
-<main>Main</main>
-<aside class="right-margin"></aside>
-<footer>Footer</footer>
+    <div class="sidenav hidden"> </div>
+    <header>
+        <span id="menu-button" class="menu-button">
+            <span onclick="handleClick()">&#9776;</span>
+        </span>
+        <div class="header-title">
+            Header
+        </div>
+    </header>
+    <nav>Nav</nav>
+    <aside class="left-margin"></aside>
+    <main>Main</main>
+    <aside class="right-margin"></aside>
+    <footer>Footer</footer>
 
 </body>
 <script>
+    function handleClick() {
+        const sidenav = document.querySelector('.sidenav')
+        const menuButton = document.querySelector('.menu-button');
+
+        sidenav.classList.toggle('hidden');
+        menuButton.classList.toggle('moved');
+    } 
 </script>
+
 </html>
