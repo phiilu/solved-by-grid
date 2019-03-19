@@ -1,3 +1,7 @@
+body {
+  overflow: auto;
+}
+
 .page-wrapper {
   min-height: 100vh;
   display: grid;
