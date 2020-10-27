@@ -14,11 +14,5 @@
   },
   "devDependencies": {
     "browser-sync": "^2.26.3"
-  },
-  "now": {
-    "type": "static",
-    "public": true,
-    "name": "solved-by-grid",
-    "alias": "solved-by-grid"
   }
 }
