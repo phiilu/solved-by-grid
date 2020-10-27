@@ -13,6 +13,6 @@
     "deploy": "now && now alias"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3"
+    "browser-sync": "^2.26.13"
   }
 }
